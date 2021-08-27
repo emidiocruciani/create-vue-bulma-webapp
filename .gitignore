@@ -1,0 +1,9 @@
+.env.local
+docker-compose.local.yml
+docker-compose.*.local.yml
+
+dist
+node_modules
+
+**/*.DS_Store
+**/*.local

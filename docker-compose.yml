@@ -1,0 +1,27 @@
+services:
+
+  # DEVELOPMENT SERVICES
+  web-dev:
+    build:
+      context: ./
+      dockerfile: docker/web.dockerfile
+      target: develop
+    image: node:custom-dev
+    ports:
+      - '8080:8080'
+    profiles:
+      - dev
+    volumes:
+      - ./:/app
+
+  # PRODUCTION SERVICES
+  web:
+    build:
+      context: ./
+      dockerfile: docker/web.dockerfile
+      target: publish
+    image: nginx:custom
+    ports:
+      - '8080:80'
+    profiles:
+      - publish

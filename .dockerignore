@@ -1,0 +1,9 @@
+.gitignore
+docker-compose.yml
+docker-compose.*.yml
+LICENSE
+README.md
+
+**/.DS_Store
+**/*.example
+**/Thumbs.db
